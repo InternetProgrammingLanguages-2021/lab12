@@ -1,4 +1,6 @@
 class ChunksController < ApplicationController
+  before_action :authorize_request
+  
   def index
     query = request.query_parameters['q']
     return render json: { error: 'no query provided' } unless query.is_a?(String)
