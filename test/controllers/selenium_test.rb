@@ -8,12 +8,12 @@ class SeleniumTest < ActionDispatch::IntegrationTest
 
   test "should see title" do
     @driver.navigate.to "http://localhost:3000"
-    assert_equal "ЛР 8", @driver.title
+    assert_equal "ЛР 12", @driver.title
   end
 
   test "should find buttons" do
     @driver.navigate.to "http://localhost:3000"
-    assert_equal ["ДОБАВИТЬ", "ОТПРАВИТЬ"], @driver.find_elements(:tag_name, "button").map(&:text)
+    assert_equal ["ВОЙТИ"], @driver.find_elements(:tag_name, "button").map(&:text)
   end
 
   def teardown
