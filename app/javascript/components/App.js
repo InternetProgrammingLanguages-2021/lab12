@@ -88,7 +88,7 @@ class App extends React.Component {
                     <Panel style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <div>
                             <Input placeholder="Логин" value={this.login} onChange={e => this.setLogin(e.target.value)}/>
-                            <Input placeholder="Пароль" value={this.password} onChange={e => this.setPassword(e.target.value)}/>
+                            <Input placeholder="Пароль" type="password" value={this.password} onChange={e => this.setPassword(e.target.value)}/>
                             <Button color="primary" onClick={this.loginUser}>Войти</Button>
                         </div>
                     </Panel>
